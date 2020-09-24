@@ -1,0 +1,24 @@
+{
+  "name": "iss_spotter_",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "request": "^2.88.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DyerMaker42/iss_spotter_.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DyerMaker42/iss_spotter_/issues"
+  },
+  "homepage": "https://github.com/DyerMaker42/iss_spotter_#readme"
+}
