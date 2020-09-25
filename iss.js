@@ -27,7 +27,21 @@ const fetchMyIP = function(callback) {
 };
 
 const fetchCoordsByIP = (ip, callback) => {
+  request('https://ipvigilante.com/8.8.8.8', (error, response, body)=>{
+    if (error){
+      return callback
+    }
+    if (response.statusCode !== 200) {
+      callback(Error(`Status Code ${response.statusCode} when fetching IP: ${body}`), null);
+      return;
+    }
 
+    const coords = {latittude: body.data.latittude, longitutde:body.data.longitutde}
+    console.log(coords)
+    
+    
+    callback(coords)
+  })
 }
 
 
