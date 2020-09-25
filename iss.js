@@ -69,11 +69,11 @@ const fetchISSFlyOverTimes = function(coords, callback) {
       return;
     }
 
-    const passArray = JSON.parse(body)
+    const passArray = JSON.parse(body).response
     console.log(passArray)
     // console.log(body)
     //console.log(data.ip)
-    callback(null, ip);
+    callback(null, passArray);
   });
 };
 
