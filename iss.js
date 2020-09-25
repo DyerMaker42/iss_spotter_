@@ -8,7 +8,7 @@
  */
 const request = require('request');
 
-const fetchMyIP = function(callback) {
+const fetchMyIP = function (callback) {
   // use request to fetch IP address from JSON API
   request('https://api.ipify.org?format=json', (error, response, body) => {
     if (error) {
@@ -22,25 +22,29 @@ const fetchMyIP = function(callback) {
     const ip = JSON.parse(body).ip;
     // console.log(body)
     //console.log(data.ip)
-    callback(null,ip);
+    callback(null, ip);
   });
 };
 
 const fetchCoordsByIP = (ip, callback) => {
-  request('https://ipvigilante.com/8.8.8.8', (error, response, body)=>{
-    if (error){
-      return callback
+  request(`https://ipvigilante.com/${ip}`, (error, response, body) => {
+  //error handling  
+  if (error) {
+      callback(error, null);
+      return;
     }
     if (response.statusCode !== 200) {
       callback(Error(`Status Code ${response.statusCode} when fetching IP: ${body}`), null);
       return;
     }
-
-    const coords = {latittude: body.data.latittude, longitutde:body.data.longitutde}
+    // if body
+    let data = JSON.parse(body).data
+    //console.log(data)
+    const coords = { latitude: data.latitude, longitude: data.longitude }
     console.log(coords)
-    
-    
-    callback(coords)
+
+
+    callback(null, coords)
   })
 }
 
