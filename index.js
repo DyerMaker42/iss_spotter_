@@ -19,10 +19,10 @@ const { fetchMyIP, fetchCoordsByIP, fetchISSFlyOverTimes } = require('./iss');
 // });
 
 //used to test pass finder
-fetchISSFlyOverTimes({ latitude: '49.27670', longitude: '-123.13000' },(error, data) => {
-  if (error) {
-    console.log(`C'mon Guy this didn't work, figure it out`, error);
-    return;
-  }
-  console.log(`Blast off! You got the stuff kid, your really did it!`, data)
-})
+// fetchISSFlyOverTimes({ latitude: '49.27670', longitude: '-123.13000' },(error, data) => {
+//   if (error) {
+//     console.log(`C'mon Guy this didn't work, figure it out`, error);
+//     return;
+//   }
+//   console.log(`Blast off! You got the stuff kid, your really did it!`, data)
+// })
