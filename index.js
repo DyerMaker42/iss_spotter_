@@ -9,10 +9,11 @@ const { fetchMyIP, fetchCoordsByIP } = require('./iss');
 //   }
 // });
 
-fetchCoordsByIP('142.179.2.174', (error, data) => {
-  if(error){
-    console.log("It didn't work dumbass!", error);
-    return;
-  }
-  console.log('It worked! Returned Coords:',data);
-});
+//fetch coords test code
+// fetchCoordsByIP('142.179.2.174', (error, data) => {
+//   if(error){
+//     console.log("It didn't work dumbass!", error);
+//     return;
+//   }
+//   console.log('It worked! Returned Coords:',data);
+// });
