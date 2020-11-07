@@ -4,4 +4,8 @@ const fetchMyIP = function() {
   return request('https://api.ipify.org?format=json')
 }
 
-module.exports = {fetchMyIP}
+const fetchCoordsByIP = function(ip){
+  const IP = JSON.parse(ip)["ip"]
+  console.log(IP)
+}
+module.exports = {fetchMyIP, fetchCoordsByIP}
